@@ -1,7 +1,9 @@
+from sreagent.ops import router as ops_router
 from fastapi import FastAPI, HTTPException
 from sreagent.agent import InputError, run
 
 app = FastAPI()
+app.include_router(ops_router, prefix="/v1")
 
 
 @app.get("/healthz")
