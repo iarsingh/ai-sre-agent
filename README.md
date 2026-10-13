@@ -1,5 +1,12 @@
 # AI SRE Agent
 
+## Overview
+
+An SRE agent exercise that takes an error-budget stance. Given a posted burn rate, `POST /agent/run` recommends a change freeze when the burn is above 2, and any request to change production is refused. A versioned `/v1` API adds workspaces, tenant isolation, job approval and audit records around the agent.
+
+- **Built with:** Python, pytest, Docker, GitHub Actions
+- **Scope:** Local laptop lab; it gives a recommendation only, with no hosted model and no production changes.
+
 <!-- project-guide:start -->
 ## Project guide
 
